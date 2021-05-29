@@ -1,0 +1,18 @@
+[
+  {
+    "modid": "pokehunt",
+    "name": "Pokehunt",
+    "description": "Adds daily Pokemon hunting and bounty quests.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+      "m1zark"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
