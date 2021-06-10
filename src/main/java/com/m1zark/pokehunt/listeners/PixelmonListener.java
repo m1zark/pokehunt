@@ -69,8 +69,10 @@ public class PixelmonListener {
         if (this.checkExpired(Date.from(Instant.parse(info.get("date"))))) return false;
         if (!info.get("name").equalsIgnoreCase(pokemon.getSpecies().name())) return false;
 
-        if (pokemon.getSpecies().getPossibleForms(false).get(Integer.parseInt(info.get("form"))).getForm() != pokemon.getForm()) {
-            return false;
+        if(Integer.parseInt(info.get("form")) != 0) {
+            if (pokemon.getSpecies().getPossibleForms(false).get(Integer.parseInt(info.get("form"))).getForm() != pokemon.getForm()) {
+                return false;
+            }
         }
 
         if (info.get("ability") != null)

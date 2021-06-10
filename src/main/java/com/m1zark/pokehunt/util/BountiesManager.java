@@ -53,7 +53,7 @@ public class BountiesManager {
         }else{
             if(this.needsAbility && !this.needsHA) {
                 this.ability = getRandomAbility(this.name);
-            }else{
+            } else {
                 this.ability = getHiddenAbility(this.name);
             }
         }
@@ -116,6 +116,7 @@ public class BountiesManager {
             }
             return random;
         }
+
         return 0;
     }
 

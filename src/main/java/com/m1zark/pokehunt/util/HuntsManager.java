@@ -55,11 +55,9 @@ public class HuntsManager {
             if(this.isUltraBeast) legends.addAll(EnumSpecies.ultrabeasts);
 
             this.pokemon = EnumSpecies.getFromNameAnyCase(legends.get(RANDOM.nextInt(legends.size())));
-            //this.pokemon = EnumSpecies.LEGENDARY_ENUMS[RANDOM.nextInt(EnumSpecies.LEGENDARY_ENUMS.length)];
 
             while(HuntsConfig.getBlacklist().contains(this.pokemon.name)) {
                 this.pokemon = EnumSpecies.getFromNameAnyCase(legends.get(RANDOM.nextInt(legends.size())));
-                //this.pokemon = EnumSpecies.LEGENDARY_ENUMS[RANDOM.nextInt(EnumSpecies.LEGENDARY_ENUMS.length)];
             }
         } else if(this.isMega) {
             this.pokemon = EnumSpecies.randomPoke(false);
