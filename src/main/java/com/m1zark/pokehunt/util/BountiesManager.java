@@ -9,6 +9,7 @@ import com.pixelmonmod.pixelmon.api.spawning.util.SetLoader;
 import com.pixelmonmod.pixelmon.enums.EnumGrowth;
 import com.pixelmonmod.pixelmon.enums.EnumNature;
 import com.pixelmonmod.pixelmon.enums.EnumSpecies;
+import com.pixelmonmod.pixelmon.enums.forms.EnumNoForm;
 import com.pixelmonmod.pixelmon.enums.forms.EnumSpecial;
 import com.pixelmonmod.pixelmon.enums.forms.IEnumForm;
 import com.pixelmonmod.pixelmon.enums.items.EnumPokeballs;
@@ -107,6 +108,7 @@ public class BountiesManager {
 
     private static int getRandomForm(String pokemon) {
         List<IEnumForm> forms = EnumSpecies.getFromNameAnyCase(pokemon).getPossibleForms(false);
+
         if (forms.size() > 0) {
             int random = new Random().nextInt(forms.size());
             IEnumForm form = forms.get(random);
